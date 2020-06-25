@@ -9,25 +9,16 @@ if (window.DeviceOrientationEvent) {
         // beta: front back motion
         var frontToBack = event.beta;
 
-
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
         console.log("yes");
-        document.body.innerHTML = `<p> rotateDegrees: ${rotateDegrees} <p>`;
+        document.body.innerHTML =   `<p> rotateDegrees: ${rotateDegrees.toFixed(2)} </p>
+                                     <p> frontToBack: ${frontToBack.toFixed(2)} </p>
+                                     <p> leftToRight: ${leftToRight.toFixed(2)} </p>`;
     }, true);
-    
-    
 }else {
     console.log("no");
     document.body.innerHTML = "nope";
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
-    console.log("orientation");
-    console.log(rotateDegrees);
-    console.log(leftToRight);
-    console.log(frontToBack);
-};
 
 function handleMotionEvent(event) {
 
