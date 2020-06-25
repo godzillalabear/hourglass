@@ -12,7 +12,7 @@ if (window.DeviceOrientationEvent) {
 
         handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
         console.log("yes");
-        document.body.innerHTML = "yes";
+        document.body.innerHTML = `<p> rotateDegrees: ${rotateDegrees} <p>`;
     }, true);
     
     
